@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 35
+    defaultConfig {
+        applicationId "kz.talipovsn.fragments"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode 4
+        versionName "2025.02"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'kz.talipovsn.fragments'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+}

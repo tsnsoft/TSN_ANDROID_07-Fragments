@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TSN_DEMO_17_Fragments</string>
+    <string name="welcomeText">Вас приветствует система быстрого анкетирования</string>
+    <string name="beginButton">Начать</string>
+    <string name="topic">Тема - Периоды жизни</string>
+    <string name="exit">Выход</string>
+    <string name="exit_desc">Выйти из приложения?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="question1">Выберите любимую кашу:</string>
+    <string name="question2">Как вы учились в 5 классе:</string>
+    <string name="question3">Какое у вас образование:</string>
+    <string name="манная">Манная</string>
+    <string name="рисовая">Рисовая</string>
+    <string name="гороховая">Гороховая</string>
+    <string name="гречневая">Гречневая</string>
+    <string name="Отлично">Отлично</string>
+    <string name="Хорошо">Хорошо</string>
+    <string name="Удовлетворительно">Удовлетворительно</string>
+    <string name="Неудовлетворительно">Неудовлетворительно</string>
+    <string name="назад">Назад</string>
+    <string name="далее">Далее</string>
+    <string name="спасибо">Спасибо что воспользовались нашей системой!</string>
+    <string name="заново">Заново</string>
+</resources>
