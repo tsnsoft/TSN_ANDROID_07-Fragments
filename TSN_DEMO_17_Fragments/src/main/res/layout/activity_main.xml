@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Корневой контейнер на весь экран; размещает область фрагментов поверх фонового изображения. -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +8,7 @@
     tools:context=".MainActivity"
     android:background="@drawable/bg">
 
-<!-- Компонент-ФРЕЙМ на весь экран -->
+    <!-- Область фрагментов растягивается на всю ширину и высоту экрана и прижата к его верхнему краю. -->
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Корневой ConstraintLayout занимает весь экран; его дочерние элементы позиционируются ограничениями относительно экрана и друг друга. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +8,7 @@
     android:background="@drawable/bg"
     tools:context=".MainActivity">
 
+    <!-- Крупное приветствие расположено по центру горизонтально; вертикальное положение смещено к верхней четверти экрана. -->
     <TextView
         android:id="@+id/TextView1"
         android:layout_width="match_parent"
@@ -24,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25" />
 
+    <!-- Тема опроса выровнена по центру под приветствием, с небольшими боковыми и вертикальными отступами. -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -42,6 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextView1"
         app:layout_constraintVertical_bias="0.19999999" />
 
+    <!-- Кнопка начала расположена по центру под описанием темы; вертикальное смещение задается ограничениями и bias. -->
     <Button
         android:id="@+id/beginBtn"
         android:layout_width="wrap_content"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Корневой контейнер итогового экрана занимает всю доступную область, задает фон и содержит вертикальную колонку. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +9,14 @@
     android:orientation="horizontal"
     tools:context=".Fragment4">
 
+    <!-- Основная колонка центрируется в родителе; благодарность, таблица и навигация идут сверху вниз. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical">
 
+        <!-- Текст благодарности расположен вверху колонки, занимает ее ширину и выравнивается по центру с внешним отступом 20dp. -->
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
@@ -24,11 +27,13 @@
             android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
+        <!-- Таблица выводится под благодарностью на всю ширину; строки с результатами могут добавляться программно. -->
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></TableLayout>
 
+        <!-- Строка навигации идет под таблицей; ее дочерние кнопки выровнены по центру горизонтально и отделены отступами. -->
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -36,6 +41,7 @@
             android:layout_marginTop="18dp"
             android:gravity="center">
 
+            <!-- Возврат к предыдущему экрану; кнопка стоит слева в строке навигации. -->
             <Button
                 android:id="@+id/backBtn"
                 android:layout_width="wrap_content"
@@ -48,6 +54,7 @@
                 android:text="@string/назад"
                 android:textColor="@color/colorWhite" />
 
+            <!-- Повторный запуск опроса; кнопка стоит справа от кнопки возврата. -->
             <Button
                 android:id="@+id/againBtn"
                 android:layout_width="wrap_content"

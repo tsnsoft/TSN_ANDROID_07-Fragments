@@ -1,8 +1,8 @@
 package kz.talipovsn.fragments;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -23,6 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Установка первого фрагмента в окно
         setFragment(this, new Fragment1());
+
+        // Перехват системного действия «Назад», чтобы сначала запросить подтверждение выхода.
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle(getString(R.string.exit))
+                        .setMessage(getString(R.string.exit_desc))
+                        .setPositiveButton(getString(R.string.yes),
+                                (dialog, which) -> finish())
+                        .setNegativeButton(getString(R.string.no), null)
+                        .show();
+            }
+        });
     }
 
     // Установка в окне требуемого фрагмента
@@ -35,24 +50,6 @@ public class MainActivity extends AppCompatActivity {
             // Выполние транзакции
             fragmentTransaction.commit();
         }
-    }
-
-    // Создание диалогового окна при нажатии на кнопку "Назад"
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setIcon(android.R.drawable.ic_dialog_alert) // Установка иконки
-                .setTitle(getString(R.string.exit)) // Установка заголовка
-                .setMessage(getString(R.string.exit_desc)) // Установка описания
-                .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
-                    // Обработка нажатия на кнопку "Да"
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();  // Закрытие приложения
-                    }
-                })
-                .setNegativeButton(getString(R.string.no), null) // Отмена закрытия приложения
-                .show(); // Показ диалогового окна
     }
 
 }
