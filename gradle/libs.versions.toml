@@ -1,0 +1,17 @@
+[versions]
+appcompat = "1.8.0"
+constraintlayout = "2.2.2"
+gradle = "9.5.1"
+gradleToolchainsFoojayResolverConvention = "1.0.0"
+kotlinBom = "2.4.21"
+legacySupportV4 = "1.0.0"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle" }
+kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "kotlinBom" }
+
+[plugins]
+gradle-toolchains-foojay-resolver-convention = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "gradleToolchainsFoojayResolverConvention" }
